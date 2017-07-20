@@ -30,6 +30,6 @@ let url = 'https://www.ibiblio.org/xml/examples/shakespeare/macbeth.xml';
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(3000, function() {
+server.listen(process.env.PORT || 3000, () => {
     console.log('Running on port 3000');
 });
