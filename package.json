@@ -13,6 +13,7 @@
   "dependencies": {
     "angular": "^1.6.5",
     "bootstrap-material-design": "^0.5.10",
+    "express": "^4.15.3",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
