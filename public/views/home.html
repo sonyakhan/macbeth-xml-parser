@@ -1,0 +1,38 @@
+<div class="row">
+   <div class="medium-12 columns">
+      <div class="text-center">
+         <h1>Macbeth Analyzer</h1>
+      </div>
+      <form>
+         <div class="form-group label-floating">
+            <label class="control-label">Search Speaker</label>
+            <input ng-model="searchText" class="form-control" type="text">
+         </div>
+         <div class="radio radio-primary">
+            <label>
+            <input ng-checked="true" type="radio" ng-model="order" value="">
+            Ascending
+            </label>
+         </div>
+         <div class="radio radio-primary">
+            <label>
+            <input type="radio" ng-model="order" value="reverse">
+            Descending
+            </label>
+         </div>
+   </div>
+   </form>
+   <table class="text-center table table-striped table-hover">
+      <thead>
+         <tr>
+            <th class="text-center">Speaker</th>
+            <th class="text-center">Lines Spoken</th>
+         </tr>
+      </thead>
+      <tr ng-repeat="speaker in speakers | filter:searchText | orderBy:sort:order">
+         <td>{{ speaker.name }}</td>
+         <td>{{ speaker.lines }}</td>
+      </tr>
+   </table>
+</div>
+</div>

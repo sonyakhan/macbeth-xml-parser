@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="macbethApp">
+<head>
+  <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap-material-design/dist/css/ripples.min.css" />     
+    
+</head>
+<body ng-controller="mainController">
+
+    <!-- HEADER AND NAVBAR -->
+    <header>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+        <div class="container">
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+            <div ng-view></div>
+        </div>
+    </div>
+
+    <!-- load angular and angular route via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="macbethapp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+    <script src="../node_modules/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="../node_modules/bootstrap-material-design/dist/js/ripples.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $.material.init();
+        });
+    </script>
+</body>
+</html>
